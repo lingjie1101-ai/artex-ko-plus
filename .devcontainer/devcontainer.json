@@ -1,0 +1,15 @@
+{
+  "name": "ARTEX Automated Lab",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8787],
+  "portsAttributes": {
+    "8787": {
+      "label": "ARTEX Web UI",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "cp -n .env.example .env 2>/dev/null || true"
+}
